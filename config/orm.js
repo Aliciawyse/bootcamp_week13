@@ -1,5 +1,5 @@
 //Import (require) `connection.js` into `orm.js`
-var connection = require('connection.js');
+var connection = require('../config/connection.js');
 
 //helper functions
 function printQuestionMarks(num) {
