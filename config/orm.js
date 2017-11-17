@@ -45,6 +45,10 @@ var orm = {
         });
     },
     insertOne: function(columns, vals, cb){
+
+        console.log('columns', columns);
+        console.log('vals', vals);
+
         var queryString = "INSERT INTO burgers";
 
         queryString += " (";
@@ -52,9 +56,8 @@ var orm = {
         queryString += ") ";
         queryString += "VALUES (";
         queryString += printQuestionMarks(vals.length);
+        //queryString += vals[0];
         queryString += ") ";
-
-        console.log(queryString);
 
         connection.query(queryString, vals, function(err, result) {
             if (err) {
